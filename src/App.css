@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  background: #000;
+}
+
+.app {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  color: #fff; /* Ensure header text is visible against background */
+}
+
+.bingo-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: yellow; /* Black border */
+  padding: 5px;
+}
+
+.bingo-cell.selected {
+  text-decoration: line-through; /* Line through the text */
+  color: #999; /* Gray out the text slightly */
+}
+
+.bingo-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.bingo-cell.free {
+  background-color: #fbc02d; /* Yellow for FREE cell */
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.bingo-cell.bingo {
+  background-color: #4caf50; /* Green for winning Bingo cells */
+  color: #fff;
+}
+
+.win-message {
+  color: #4caf50;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.bingo-board {
+  position: relative;
+}
